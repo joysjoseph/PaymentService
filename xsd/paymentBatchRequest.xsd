@@ -1,0 +1,30 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="paymentBatchRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="PID"/>
+        <xs:element type="xs:long" name="transactionCount"/>
+        <xs:element type="xs:long" name="BatchID"/>
+        <xs:element type="xs:long" name="SeqNumber"/>
+        <xs:element name="paymentBatchRecord" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="transactionType"/>
+              <xs:element type="xs:string" name="brandCode"/>
+              <xs:element type="xs:float" name="amount"/>
+              <xs:element type="xs:string" name="currency"/>
+              <xs:element type="xs:string" name="divisionnumber"/>
+              <xs:element type="xs:string" name="TransactionLable0"/>
+              <xs:element type="xs:string" name="merchantOrderNumber"/>
+              <xs:element type="xs:string" name="externalReferenceId"/>
+              <xs:element type="xs:long" name="txRefNum"/>
+              <xs:element type="xs:long" name="paymentOrderID"/>
+              <xs:element type="xs:long" name="BatchDetailId"/>
+              <xs:element type="xs:string" name="MerchantTxId"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
